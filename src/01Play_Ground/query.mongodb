@@ -1,0 +1,30 @@
+use("Propietario")
+db.Información.find ({Name:"Lucia Gomez"})
+
+use("Propietario")
+db.Información.find ({Tower:"2"})
+
+use("Vehiculo")
+db.Placa.find ({Brand:"BMW"})
+
+use("Vehiculo")
+db.Placa.find ({Propietario_Visitante:"Propietario"})
+
+use("Visitante")
+db.Datos.find ({Visit_Apartment:"503"})
+
+use("Visitante")
+db.Datos.insertOne({
+    "Name":"Andrea",
+    "Visit_Tower": "5",
+    "Visit_Apartment": "102",
+    "Borrowed_Parking": "26"
+})
+
+use("Visitante")
+db.Datos.deleteOne({
+    "Name":"Andrea",
+    "Visit_Tower": "5",
+    "Visit_Apartment": "102",
+    "Borrowed_Parking": "26"
+})
